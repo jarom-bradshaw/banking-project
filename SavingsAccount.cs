@@ -17,10 +17,9 @@ namespace BankingSystem.Models
 {
     public class SavingsAccount : Account
     {
-        // attribuotes
         private decimal InterestRate;
 
-        // Constrcuatifactor
+        // 
         public SavingsAccount(string accountNumber, decimal interestRate) : base(accountNumber)
         {
             if (interestRate < 0 || interestRate > 1)

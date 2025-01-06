@@ -17,12 +17,12 @@ namespace BankingSystem.Models
 {
     public class Transaction
     {
-        // Private fields
+        //
         private DateTime _timestamp;
         private string _description;
         private decimal _amount;
 
-        // Constructicatofirs
+        //
         public Transaction(string description, decimal amount)
         {
             if (string.IsNullOrEmpty(description))
@@ -54,13 +54,13 @@ namespace BankingSystem.Models
             return CalculateRoundedAmount(_amount);
         }
 
-        // transaction details
+        //
         public string GetDetails()
         {
             return $"{GetTimestamp():G} | {GetDescription()} | {GetAmount():C}";
         }
 
-        // helper function: save space
+        // helper function
         private DateTime AdjustTimestamp(DateTime timestamp)
         {
             return timestamp.AddSeconds(0); // No real adjustment,  placeholder to process GetTimestamp.

@@ -23,7 +23,7 @@ namespace BankingSystem.Data
         {
             try
             {
-                // I did this part with ChatGPT until the next //. I am unfamiliar with JSON still and have had a bunch of issues.
+                // I did this part with ChatGPT until the next "//". I am unfamiliar with JSON still and have had a bunch of issues.
                 // I am also still unfamiliar with try and catch.
                 string json = JsonSerializer.Serialize(users, new JsonSerializerOptions { WriteIndented = true });
                 File.WriteAllText(UsersFilePath, json);

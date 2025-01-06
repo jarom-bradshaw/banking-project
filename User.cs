@@ -32,13 +32,13 @@ namespace BankingSystem.Models
 {
     public class User
     {
-        // Private fields
+        // 
         private string _name;
         private string _userId;
         private string _contactInfo;
         private List<Account> _accounts;
 
-        // Constructor
+        // 
         public User(string name, string userId, string contactInfo)
         {
             if (string.IsNullOrEmpty(name))
@@ -76,7 +76,7 @@ namespace BankingSystem.Models
         }
 
         // 
-        public void AddAccount(Account account) //Find out what I have wrong with access to access it
+        public void AddAccount(Account account) // Solved the error
         {
             if (account == null)
                 throw new ArgumentException("Account cannot be null.");
@@ -84,7 +84,7 @@ namespace BankingSystem.Models
             _accounts.Add(account);
         }
 
-        // Get the list of accounts. Idk why there is an error. It's private, but I should be able to use it within this class I thought.
+        // Solved the error
         public List<Account> GetAccounts()
         {
             return _accounts;

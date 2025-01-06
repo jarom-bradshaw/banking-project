@@ -37,7 +37,7 @@ namespace BankingSystem.Models
                 throw new ArgumentException("Overdraft limit must be non-negative.");
 
             OverdraftLimit = overdraftLimit;
-            Fee = transactionFee; // Set default transaction fee
+            Fee = transactionFee; 
         }
 
         // Override Withdraw to allow overdrafts
@@ -46,11 +46,9 @@ namespace BankingSystem.Models
             if (amount <= 0)
                 throw new ArgumentException("Withdrawal amount must be greater than zero.");
 
-            // Check if withdrawal exceeds balance and overdraft limit
             if (amount > GetBalance() + OverdraftLimit)
                 throw new InvalidOperationException("Withdrawal exceeds balance and overdraft limit.");
 
-            // Apply overdraft fee if balance goes into negative
             if (amount > GetBalance())
             {
                 decimal overdraftFee = Fee;
@@ -58,11 +56,10 @@ namespace BankingSystem.Models
                 base.Withdraw(Fee); // Deduct fee from balance
             }
 
-            // Deduct the amount from balance
             base.Withdraw(amount);
         }
 
-        // Checking accounts typically don't accrue interest
+        // Checking accounts typically don't accrue interest. But I can keep this here to expand types of accounts that could accrue interest.
         public override decimal CalculateInterest()
         {
             return 0m; // No interest for checking accounts

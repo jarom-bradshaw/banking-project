@@ -1,9 +1,11 @@
 // Initializes default data (optional, for testing)
-// Populates the application with default users, accounts, or transactions (useful for development or testing).
+// this should work as initial test, but I need more testing to make sure 
+// everything works. There can be no unhappy paths for me.
+// Populates the application with default users, accounts, or transactions
+//  (useful for development or testing).
 
-// Might need to find a library to do that. I did this with ChatGPT to show that my program works. 
+// Might need to find a library to do that. 
 
-// THE TEXT BELOW WAS GENERATED WITH CHATGPT
 
 using System.Collections.Generic;
 using BankingSystem.Models;
@@ -28,7 +30,7 @@ namespace BankingSystem.Data
             users.Add(user1);
 
             // Create User 2
-            var user2 = new User("Bob Smith", "U002", "bob@example.com");
+            var user2 = new User("Bob Smith", "U002", "luckycharms@yahoo.com");
             var savings2 = new SavingsAccount("SAV002", 0.05m); // 5% interest
             savings2.Deposit(10000m);
             savings2.Withdraw(1000m);

@@ -319,7 +319,7 @@ public class MainMenu
             Console.WriteLine($"{i + 1}. {accounts[i].GetAccountNumber()}");
         }
 
-        // Fix: Parse the user's choice as an integer Fixed this bug with ChatGPT when testing the program.
+        // Fix: Parse the user's choice as an integer Fixed this bug with ChatGPT when testing the program. Minimal changes, majority of the code was my own.
         if (!int.TryParse(Console.ReadLine(), out int accountChoice) || accountChoice < 1 || accountChoice > accounts.Count)
         {
             Console.WriteLine("Invalid account choice. Please choose a number.");

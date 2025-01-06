@@ -58,7 +58,7 @@ namespace BankingSystem.Services
         }
 
         // Optional: Get all current fee rates (for administrative purposes)  : Additional capability that I did not think of that
-        //  I incoporated through ChatHPT
+        //  I came up with via ChatGPT, but coded myself.
         public Dictionary<string, decimal> GetAllFees()
         {
             return new Dictionary<string, decimal>(_feeRates); // Return a copy to preserve encapsulation

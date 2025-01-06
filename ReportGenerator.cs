@@ -18,7 +18,7 @@ namespace BankingSystem.Services
 {
     public static class ReportGenerator
     {
-        // Generate a detailed statement for an account
+        // 
         public static string GenerateAccountStatement(Account account)
         {
             if (account == null)
@@ -41,7 +41,7 @@ namespace BankingSystem.Services
             return report.ToString();
         }
 
-        // Generate a user summary report
+        //
         public static string GenerateUserReport(User user)
         {
             if (user == null)
@@ -67,7 +67,7 @@ namespace BankingSystem.Services
             return report.ToString();
         }
 
-        // Save report to a file
+        // 
         public static void SaveReportToFile(string report, string fileName)
         {
             if (string.IsNullOrEmpty(fileName))
