@@ -1616,11 +1616,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\banking-project\\FinalProject.csproj",
+      "projectUniqueName": "C:\\Jarom's_GitHub\\banking-project\\FinalProject.csproj",
       "projectName": "FinalProject",
-      "projectPath": "C:\\banking-project\\FinalProject.csproj",
+      "projectPath": "C:\\Jarom's_GitHub\\banking-project\\FinalProject.csproj",
       "packagesPath": "C:\\Users\\jarom\\.nuget\\packages\\",
-      "outputPath": "C:\\banking-project\\obj\\",
+      "outputPath": "C:\\Jarom's_GitHub\\banking-project\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
