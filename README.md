@@ -21,3 +21,4 @@ The software was developed using Visual Studio Code as the integrated developmen
 - Implement a graphical user interface (GUI) for the application.
 - Add more account types, such as business accounts or student accounts.
 - Enhance the transaction logging and reporting features.
+- Make sure code is robust and has A/B tests. Look for any potential try/catches to add.
