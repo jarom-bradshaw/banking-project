@@ -324,6 +324,8 @@ public class MainMenu
         {
             Console.WriteLine("Invalid account choice. Please choose a number.");
             return;
+            // 2/28/2025: Not sure if this is continuing the program and allows the to ReadLine
+            // TO DO: Refactor the code above to be completely mine and not chatGPT.
         }
 
         var account = accounts[accountChoice - 1];

@@ -1,7 +1,12 @@
 // 6. Class: Bank
-// Purpose: Looks at user’s and set’s up a simple relationship between bank and users to manage them kind’ve Main. I’m not sure if I need main. 
-// I want to make GUI but idk how. I’ve looked at it online for a while and , not interface that’s in Main() Building Desktop GUIs with C#: 
+// Purpose: Looks at user’s and set’s up a simple relationship between bank and users to manage them kind’ve Main. I’m
+// not sure if I need main. 
+
+// I want to make GUI but idk how. I’ve looked at it online for a while and , not interface that’s in Main() Building
+// TO DO: Desktop GUIs with C#: 
 // A Comprehensive Guide – Schools bruh
+
+// UML summary
 // Attributes:
 // private List<User> Users
 // Methods:
@@ -40,8 +45,12 @@ namespace BankingSystem.Services
         {
             if (user == null)
                 throw new ArgumentException("User cannot be null.");
-            // ChatGPT helped with this line of code to prevent duplicates. I get the concept though and understand it. It would just be difficult to 
-            // implement on my own.
+            // ChatGPT helped with this specific line of code below to prevent duplicates. I get the concept though and
+            // understand it.It would just be difficult to implement on my own.
+            // UPDATE 2/18/2025
+            // I was unfamiliar with lambda syntax. Code has been refactored. It is checking any object in _users
+            //(List) against the specific User ID to see if they are a duplicate, and it will return true if there is a
+            //userID that is the being added that is already in the list of userIDs
             if (_users.Any(u => u.GetUserId() == user.GetUserId()))
                 throw new InvalidOperationException("A user with this ID already exists.");
 

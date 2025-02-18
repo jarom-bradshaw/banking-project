@@ -59,10 +59,15 @@ namespace BankingSystem.Models
             base.Withdraw(amount);
         }
 
-        // Checking accounts typically don't accrue interest. But I can keep this here to expand types of accounts that could accrue interest.
+        // Checking accounts typically don't accrue interest. TO DO: I can keep this here to expand types of accounts
+        // that could accrue interest.
         public override decimal CalculateInterest()
         {
             return 0m; // No interest for checking accounts
+            // Long Term Interest
+            // Variable Rate Interest (Maybe use a API or make a simple webcrawler to update information of a site)
+            // TO DO: Consider memory and efficiency of calling API's to update ranks to a standard amount from FDIC 
+            // insured banks.
         }
     }
 }

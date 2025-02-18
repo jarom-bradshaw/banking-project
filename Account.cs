@@ -73,7 +73,8 @@ namespace BankingSystem.Models
             return _transactionHistory.AsReadOnly(); // Prevent external modification
         }
 
-        // Public wrapper for adding transactions so that Bank.cs doesn't have to use AddTransaction and we still use encapsulation.
+        // Public wrapper for adding transactions so that Bank.cs doesn't have to use AddTransaction and we still use
+        // encapsulation.
         public void LogTransaction(string description, decimal amount)
         {
             AddTransaction($"{description}: {amount:C}");
